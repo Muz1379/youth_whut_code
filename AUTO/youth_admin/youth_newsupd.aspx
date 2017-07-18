@@ -58,6 +58,11 @@
                 <asp:TextBox ID="txtContent" runat="server" style="display:none;"></asp:TextBox>
                 <script type="text/javascript">
                     var ue = UE.getEditor('txtcontent');
+                    ue.ready(function () {
+                        ue.setContent(document.getElementById("<%=txtContent.ClientID%>").value);
+
+
+                    });
                  </script>
 
 
